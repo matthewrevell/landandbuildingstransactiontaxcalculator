@@ -5,7 +5,7 @@ function calcStampDuty(price) {
     // Below £125,000.01, there's no Stamp Duty to pay on residential properties in the UK 
     return 0;   
   }
-  if (price >= 125001 && price < 250000) {
+  if (price >= 125001 && price <= 250000) {
     // Between £125,001 and £250,000, 2% is payable on the amount above £125,000
     // but below £250,000
     var taxableAmount = price - 125000;
