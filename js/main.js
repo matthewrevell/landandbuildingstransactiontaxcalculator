@@ -9,22 +9,26 @@ function calcStampDuty(price) {
     // Between £125,001 and £250,000, 2% is payable on the amount above £125,000
     // but below £250,000
     var taxableAmount = price - 125000;
-    return taxableAmount * 0.02;
+    var sdlt = taxableAmount * 0.02;
+    return Math.floor(sdlt);
   }
   if (price >= 250001 && price <= 925000) {
     // Between £250,001 and £925,000, 5% is payable on the amount above £250,000
     var variablePortion = price - 250000;
-    return variablePortion * 0.05 + 2500;
+    var sdlt = variablePortion * 0.05 + 2500;
+    return Math.floor(sdlt);
   }
   if (price >= 925001 && price <= 1500000) {
     // Between £925,001 and £1,500,000, 10% is payable on the amount above £925,000
     var variablePortion = price - 925000;
-    return variablePortion * 0.1 + 36250;
+    var sdlt = variablePortion * 0.1 + 36250;
+    return Math.floor(sdlt);
   }
   if (price > 1500000) {
     // Over £1.5m, 12% is payable for that portion
     var variablePortion = price - 1500000;
-    return variablePortion * 0.12 + 93750;
+    var sdlt = variablePortion * 0.12 + 93750;
+    return Math.floor(sdlt);
   }
 }
 
