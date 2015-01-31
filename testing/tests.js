@@ -1,7 +1,7 @@
 QUnit.test('Amounts under £125,001 have 0 SDLT', function(assert) {
   assert.strictEqual(calcStampDuty(1), 0, '1 should give 0 SDLT');
-  assert.strictEqual(calcStampDuty(125000), 0, '125000 should give 0 SDLT');
   assert.strictEqual(calcStampDuty(79635), 0, '79635 should give 0 SDLT');
+  assert.strictEqual(calcStampDuty(125000), 0, '125000 should give 0 SDLT');
 });
 
 QUnit.test('Amounts between £125,001 and £250k (allowing for rounding)', function(assert) {
