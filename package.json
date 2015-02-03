@@ -11,6 +11,7 @@
     "grunt-contrib-watch": "*",
     "grunt-cssc": "*",
     "grunt-htmlhint": "*",
+    "grunt-contrib-jshint": "*",
     "load-grunt-tasks": "^3.1.0",
     "matchdep": "*"
   }
